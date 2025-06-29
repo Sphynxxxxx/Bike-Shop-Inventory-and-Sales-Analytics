@@ -92,8 +92,7 @@ if (isset($pdo)) {
         ");
         $inventoryOverview = $inventoryStmt->fetch();
         
-        // Inventory change (this month vs last month stock movements)
-        $inventoryChange = -2.3; // Placeholder - you can calculate actual inventory changes
+
         
         // Monthly Sales Data for Chart (selected year)
         $monthlySalesStmt = $pdo->prepare("
@@ -439,15 +438,14 @@ if (empty($monthlySales)) {
                                 <i class="fas fa-boxes me-2"></i> Inventory
                             </a>
                         </li>
-                        <!-- New Services Tab -->
                         <li class="nav-item">
-                            <a class="nav-link" href="services.php">
+                            <a class="nav-link" href="#">
                                 <i class="fas fa-concierge-bell me-2"></i> Services
                             </a>
                         </li>
                     </ul>
 
-                    <a href="#" class="logout-btn">
+                    <a href="auth/logout.php" class="logout-btn">
                         <i class="fas fa-sign-out-alt me-2"></i> Logout
                     </a>
                 </div>

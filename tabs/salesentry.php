@@ -378,13 +378,18 @@ if (isset($pdo)) {
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" onclick="setActiveTab(this)">
+                            <a class="nav-link" href="inventory.php" onclick="setActiveTab(this)">
                                 <i class="fas fa-boxes me-2"></i> Inventory
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-concierge-bell me-2"></i> Services
                             </a>
                         </li>
                     </ul>
                     
-                    <a href="#" class="logout-btn">
+                    <a href="auth/logout.php" class="logout-btn">
                         <i class="fas fa-sign-out-alt me-2"></i> Logout
                     </a>
                 </div>
