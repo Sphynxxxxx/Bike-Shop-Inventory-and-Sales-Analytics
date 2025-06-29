@@ -7,22 +7,7 @@ $error_message = "";
 $products = [];
 $recentSales = [];
 
-// Check if PDO connection exists, if not create one
-if (!isset($pdo)) {
-    try {
-        // Database configuration - adjust these values to match your setup
-        $host = 'localhost';
-        $dbname = 'bike_shop'; // Change this to your actual database name
-        $username = 'root';
-        $password = '';
-        
-        $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-    } catch (PDOException $e) {
-        $error_message = "Database connection failed: " . $e->getMessage() . ". Please make sure the database exists and the connection details are correct.";
-    }
-}
+
 
 // Handle delete request
 if (isset($_GET['delete']) && isset($pdo)) {
@@ -353,7 +338,7 @@ if (isset($pdo)) {
         <div class="container-fluid">
             <div class="navbar-brand d-flex align-items-center">
                 <img src="assets/logo/logo.png" alt="Bike Shop Logo" class="me-3" style="width: 40px; height: 40px; object-fit: contain;">
-                <span>Bike Shop Inventory and Sales Analytics</span>
+                <span>Bike Shop Inventory</span>
                 <span class="ms-4 text-muted">Sales Entry</span>
             </div>
             

@@ -439,13 +439,20 @@ if (empty($monthlySales)) {
                                 <i class="fas fa-boxes me-2"></i> Inventory
                             </a>
                         </li>
+                        <!-- New Services Tab -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.php">
+                                <i class="fas fa-concierge-bell me-2"></i> Services
+                            </a>
+                        </li>
                     </ul>
-                    
+
                     <a href="#" class="logout-btn">
                         <i class="fas fa-sign-out-alt me-2"></i> Logout
                     </a>
                 </div>
             </div>
+
 
             <!-- Main Content -->
             <div class="col-md-9 col-lg-10">
